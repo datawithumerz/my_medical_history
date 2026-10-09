@@ -1,0 +1,445 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_stack" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-fixed-variant": "#43474e", "primary-container": "#0d59c2", "inverse-primary": "#afc6ff", "timeline-track": "#c2c6d5", "tertiary": "#00512a", "tertiary-container": "#006c39", "on-background": "#191c20", "on-error": "#ffffff", "on-primary": "#ffffff", "text-primary": "#191c20", "surface-container-low": "#f1f5fd", "surface-card": "#ffffff", "secondary-fixed": "#dfe2eb", "surface-tint": "#0f5ac3", "on-primary-container": "#c9d7ff", "on-secondary-fixed": "#181c22", "outline-variant": "#c2c6d5", "on-tertiary-fixed-variant": "#00522a", "background": "#f8f9ff", "on-surface": "#191c20", "error": "#ba1a1a", "warning-amber-text": "#78350f", "inverse-surface": "#2e3135", "on-secondary-container": "#61646c", "primary-fixed-dim": "#afc6ff", "outline-hairline": "#dce2ee", "on-tertiary-fixed": "#00210e", "surface": "#f8f9ff", "surface-bright": "#f8f9ff", "on-error-container": "#93000a", "warning-amber": "#855300", "on-secondary": "#ffffff", "secondary-fixed-dim": "#c3c6cf", "secondary": "#5b5e66", "success-green": "#006d3a", "success-green-container": "#dcfce7", "on-primary-fixed-variant": "#004398", "error-container": "#ffdad6", "primary": "#004297", "outline": "#737784", "tertiary-fixed-dim": "#80d99b", "text-tertiary": "#737784", "warning-amber-container": "#fef3c7", "surface-container-high": "#e6e8ed", "primary-variant": "#0b4ca8", "tertiary-fixed": "#9bf6b5", "primary-fixed": "#d9e2ff", "on-tertiary-container": "#90eaaa", "surface-dim": "#d8dadf", "on-surface-variant": "#424753", "surface-variant": "#e1e2e8", "secondary-container": "#dfe2eb", "inverse-on-surface": "#eff0f6", "surface-container-highest": "#e1e2e8", "success-green-text": "#004020", "on-tertiary": "#ffffff", "text-secondary": "#43474e", "on-primary-fixed": "#001a43", "surface-container": "#eceef3", "surface-container-lowest": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "margin-tablet": "1.5rem", "space-md": "1rem", "gutter-mobile": "0.75rem", "gutter": "1rem", "space-sm": "0.5rem", "space-xl": "2rem", "margin": "1rem", "space-lg": "1.5rem" }, "fontFamily": { "display-lg": ["Inter"], "headline-md": ["Inter"], "label-sm": ["Inter"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "body-sm": ["Inter"], "title-md": ["Inter"], "title-lg": ["Inter"], "label-md": ["Inter"], "body-md": ["Inter"], "label-lg": ["Inter"] }, "fontSize": { "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "headline-lg": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-lg": ["17px", { "lineHeight": "26px", "fontWeight": "400" }], "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "title-md": ["17px", { "lineHeight": "24px", "fontWeight": "600" }], "title-lg": ["19px", { "lineHeight": "26px", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "label-lg": ["15px", { "lineHeight": "20px", "fontWeight": "600" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100vh;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-sm flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go back" class="w-12 h-12 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-high transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-title-lg text-title-lg text-on-surface tracking-tight">VISIT — Details</h1></div><div class="w-12 h-12 flex items-center justify-center"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full bg-surface pt-16 pb-safe"><div class="flex flex-col w-full pb-24">
+<!-- Top Auxiliary Action Sub-Bar (Matches Android Top Stack Header actions) -->
+<div class="px-space-md py-space-sm flex items-center justify-between bg-surface-container-low shadow-sm">
+<div class="flex items-center gap-space-xs text-text-secondary">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<span class="font-label-md text-label-md">Tuesday, 6 October 2026 • 10:30 AM</span>
+</div>
+<!-- Overflow Menu Trigger & Dropdown -->
+<div class="relative">
+<button aria-label="More options" class="w-12 h-12 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container transition-colors focus:bg-surface-container-high active:scale-95" id="overflowMenuBtn">
+<span class="material-symbols-outlined text-[24px]">more_vert</span>
+</button>
+<!-- Dropdown Popup Card -->
+<div class="hidden absolute right-0 top-12 w-48 bg-surface-card rounded-xl shadow-xl z-30 py-space-xs overflow-hidden" id="overflowDropdown">
+<button class="w-full h-12 px-space-md flex items-center gap-space-sm text-left hover:bg-surface-container-low transition-colors text-text-primary" onclick="handleEditAction()">
+<span class="material-symbols-outlined text-[20px] text-primary">edit</span>
+<span class="font-label-lg text-label-lg">Edit Visit</span>
+</button>
+<button class="w-full h-12 px-space-md flex items-center gap-space-sm text-left hover:bg-error-container/40 transition-colors text-error" onclick="handleDeleteAction()">
+<span class="material-symbols-outlined text-[20px] text-error">delete</span>
+<span class="font-label-lg text-label-lg">Delete Visit</span>
+</button>
+</div>
+</div>
+</div>
+<div class="px-space-md flex flex-col gap-space-lg mt-space-md">
+<!-- Section 1: Consultation Overview -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-title-lg text-title-lg text-text-primary">Consultation Overview</h2>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-text-secondary">Routine In-Person</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Doctor Info Card -->
+<div class="bg-surface-card rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="relative w-14 h-14 rounded-full overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Professional medical portrait of Dr. Ahmed Khan, a mature male South Asian physician wearing clinical lab attire and a stethoscope, warm gentle lighting, clean soft background, dignified healthcare photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx9pj29R176zr-2GnuyNDR6U9HE9GI7HncjWwnQxdACMk3Ev7yb6NVCzpdu-loS1-kE4N6H2JYI2lgDGeFQG-JcTNzxC3Yokh9egWR2QLTqoQmaLB9bQX2V1kle2fLiQ0Qw1daOHiXVLR101LCzN28p5Vy49tKliadfYpr2V7DkXp1lhckk8hARl9K_Cac2sVXYXJmH4yBO9-LInw9SfNGwixXejEh9ofNEmRsnORv">
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center gap-1">
+<span class="font-title-md text-title-md text-text-primary truncate">Dr. Ahmed Khan</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-secondary truncate">General Physician • Internal Medicine</span>
+<span class="font-label-sm text-label-sm text-text-tertiary">License: GMC-849201</span>
+</div>
+</div>
+<button class="w-full h-12 rounded-lg bg-surface-container-low hover:bg-secondary-container transition-colors flex items-center justify-between px-space-md text-primary active:scale-[0.99]" onclick="navigateToDoctor()">
+<span class="font-label-lg text-label-lg">View Doctor Profile</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+<!-- Facility Location Card -->
+<div class="bg-surface-card rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-[22px]">local_hospital</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-title-md text-title-md text-text-primary truncate">City Medical Hospital</span>
+<span class="font-body-sm text-body-sm text-text-secondary">West Wing Clinic, Building B, Suite 300</span>
+<span class="font-label-sm text-label-sm text-text-tertiary">Grandview Parkway, Medical District</span>
+</div>
+</div>
+<a class="w-full h-12 rounded-lg bg-surface-container-low hover:bg-secondary-container transition-colors flex items-center justify-center gap-space-xs text-primary font-label-lg text-label-lg active:scale-[0.99]" href="https://maps.google.com" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[20px]">directions</span>
+<span class="">Open in Maps</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Section 2: Diagnosis & Reported Symptoms -->
+<section class="flex flex-col gap-space-sm">
+<h2 class="font-title-lg text-title-lg text-text-primary">Diagnosis &amp; Reported Symptoms</h2>
+<div class="bg-surface-card rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<!-- Primary Diagnosis -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs text-text-secondary">
+<span class="material-symbols-outlined text-[18px] text-primary">stethoscope</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Primary Recorded Diagnosis</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<p class="font-title-md text-title-md text-text-primary">Acute Bronchitis &amp; Hypertension Stage 1</p>
+<p class="font-label-sm text-label-sm text-text-secondary mt-1">ICD-10 Code: J20.9 • I10</p>
+</div>
+</div>
+<!-- Reported Symptoms -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs text-text-secondary">
+<span class="material-symbols-outlined text-[18px] text-warning-amber">personal_injury</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Reported Symptoms &amp; Duration</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<p class="font-body-md text-body-md text-text-primary">
+              Persistent dry cough for 5 days, mild chest tightness and fatigue upon exertion.
+            </p>
+<div class="flex items-center gap-space-xs mt-2 text-text-secondary">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="font-label-sm text-label-sm">Onset: 1 October 2026 (Evening)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Transcribed Clinical Notes & Personal Log -->
+<section class="flex flex-col gap-space-sm">
+<h2 class="font-title-lg text-title-lg text-text-primary">Clinical Notes &amp; Personal Log</h2>
+<div class="bg-surface-card rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<!-- Physician Transcription -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-text-secondary">
+<span class="material-symbols-outlined text-[18px] text-primary">clinical_notes</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Doctor’s notes (transcribed)</span>
+</div>
+
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low">
+<p class="font-body-md text-body-md text-text-primary leading-relaxed">
+              “Bilateral rhonchi noted at lung bases. BP 138/88 mmHg. Advised warm hydration, prescribed inhaler and 5-day course antibiotic. Routine blood panel ordered.”
+            </p>
+<div class="mt-space-sm flex flex-wrap gap-space-sm pt-space-xs">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-text-secondary">
+<span class="material-symbols-outlined text-[14px]">favorite</span> BP: 138/88
+              </span>
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-text-secondary">
+<span class="material-symbols-outlined text-[14px]">air</span> SpO2: 98%
+              </span>
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-text-secondary">
+<span class="material-symbols-outlined text-[14px]">thermostat</span> Temp: 98.8°F
+              </span>
+</div>
+</div>
+</div>
+<!-- Personal Patient Memory Log -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-text-secondary">
+<span class="material-symbols-outlined text-[18px] text-tertiary">edit_note</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Personal Memory Log</span>
+</div>
+<div class="p-space-md rounded-lg bg-warning-amber-container/40">
+<p class="font-body-md text-body-md text-text-primary leading-relaxed">
+              “Doctor mentioned taking inhaler 15 mins before evening walk. Keep bedroom humidifier running.”
+            </p>
+<p class="font-label-sm text-label-sm text-warning-amber-text mt-space-xs">
+              Added directly after consultation on phone
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Prescribed Medicines (3 Items) -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-title-lg text-title-lg text-text-primary">Prescribed Medicines</h2>
+<span class="font-label-md text-label-md text-text-secondary">3 Items</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Item 1 -->
+<div class="bg-surface-card rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">medication</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-text-primary">Amoxicillin-Clavulanate 625mg</span>
+<span class="font-body-sm text-body-sm text-text-secondary">1 tablet, twice daily for 5 days</span>
+</div>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container font-label-sm text-label-sm text-on-secondary-container flex-shrink-0">Short Course</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-low text-text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">restaurant</span>
+<span class="">Take with food</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-card rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">air</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-text-primary">Salbutamol Inhaler 100mcg</span>
+<span class="font-body-sm text-body-sm text-text-secondary">2 puffs every 6 hours as needed</span>
+</div>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-warning-amber-container font-label-sm text-label-sm text-warning-amber-text flex-shrink-0">As Needed</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-low text-text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">info</span>
+<span class="">Before exercise or bedtime</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface-card rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">pill</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-text-primary">Amlodipine 5mg</span>
+<span class="font-body-sm text-body-sm text-text-secondary">1 tablet, once daily in the morning</span>
+</div>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-success-green-container font-label-sm text-label-sm text-success-green-text flex-shrink-0">Ongoing</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-low text-text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">wb_sunny</span>
+<span class="">Consistent morning routine</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Diagnostic Tests (2 Ordered) -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-title-lg text-title-lg text-text-primary">Diagnostic Tests</h2>
+<span class="font-label-md text-label-md text-text-secondary">2 Ordered</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Test 1 -->
+<div class="bg-surface-card rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-text-primary">Complete Blood Count (CBC)</span>
+<span class="font-label-sm text-label-sm text-text-secondary">Ordered on 6 Oct 2026</span>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-success-green-container text-success-green-text font-label-sm text-label-sm">Completed</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-text-tertiary uppercase">Clinical Finding</span>
+<p class="font-body-sm text-body-sm text-text-primary">WBC 11.2 (Mild leukocytosis)</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-space-xs text-text-secondary font-label-md text-label-md truncate">
+<span class="material-symbols-outlined text-[18px]">attachment</span>
+<span class="truncate">CBC_LabSlip_Oct2026.pdf</span>
+</div>
+<button class="h-10 px-space-sm rounded-lg bg-surface-container hover:bg-secondary-container transition-colors font-label-md text-label-md text-primary flex items-center gap-1 flex-shrink-0" onclick="previewFile('CBC_LabSlip_Oct2026.pdf')">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+<span class="">View</span>
+</button>
+</div>
+</div>
+<!-- Test 2 -->
+<div class="bg-surface-card rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-text-primary">Chest X-Ray (PA View)</span>
+<span class="font-label-sm text-label-sm text-text-secondary">Ordered on 6 Oct 2026</span>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-success-green-container text-success-green-text font-label-sm text-label-sm">Completed</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-text-tertiary uppercase">Clinical Finding</span>
+<p class="font-body-sm text-body-sm text-text-primary">Mild peribronchial thickening, no active consolidation</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-space-xs text-text-secondary font-label-md text-label-md truncate">
+<span class="material-symbols-outlined text-[18px]">attachment</span>
+<span class="truncate">Chest_XRay_Report.jpg</span>
+</div>
+<button class="h-10 px-space-sm rounded-lg bg-surface-container hover:bg-secondary-container transition-colors font-label-md text-label-md text-primary flex items-center gap-1 flex-shrink-0" onclick="previewFile('Chest_XRay_Report.jpg')">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+<span class="">View</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 6: Documents & Files (2 Files) -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-title-lg text-title-lg text-text-primary">Documents &amp; Files</h2>
+<span class="font-label-md text-label-md text-text-secondary">2 Files</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- File 1 -->
+<div class="bg-surface-card rounded-xl p-space-md shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-12 h-12 rounded-xl bg-error-container text-error flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-text-primary truncate">Dr_Khan_Rx_Oct06_2026.pdf</span>
+<span class="font-body-sm text-body-sm text-text-secondary">Prescription • 420 KB</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-shrink-0">
+<button aria-label="View Prescription" class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-surface-container text-text-secondary hover:text-text-primary transition-colors" onclick="previewFile('Dr_Khan_Rx_Oct06_2026.pdf')">
+<span class="material-symbols-outlined text-[22px]">visibility</span>
+</button>
+<button aria-label="Download Prescription" class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-surface-container text-primary transition-colors" onclick="downloadFile('Dr_Khan_Rx_Oct06_2026.pdf')">
+<span class="material-symbols-outlined text-[22px]">download</span>
+</button>
+</div>
+</div>
+<!-- File 2 -->
+<div class="bg-surface-card rounded-xl p-space-md shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">image</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-text-primary truncate">Chest_XRay_Report.jpg</span>
+<span class="font-body-sm text-body-sm text-text-secondary">Lab Report • 1.8 MB</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-shrink-0">
+<button aria-label="View X-Ray" class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-surface-container text-text-secondary hover:text-text-primary transition-colors" onclick="previewFile('Chest_XRay_Report.jpg')">
+<span class="material-symbols-outlined text-[22px]">visibility</span>
+</button>
+<button aria-label="Download X-Ray" class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-surface-container text-primary transition-colors" onclick="downloadFile('Chest_XRay_Report.jpg')">
+<span class="material-symbols-outlined text-[22px]">download</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 7: Scheduled Follow-up -->
+<section class="flex flex-col gap-space-sm">
+<h2 class="font-title-lg text-title-lg text-text-primary">Scheduled Follow-up</h2>
+<div class="bg-surface-card rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">event_repeat</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-text-primary">15 October 2026 • 10:30 AM</span>
+<span class="font-body-sm text-body-sm text-text-secondary">With Dr. Ahmed Khan</span>
+</div>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-text-secondary">In 7 days</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-text-tertiary uppercase">Clinical Purpose</span>
+<p class="font-body-md text-body-md text-text-primary">Evaluate lung clearance &amp; antibiotic response.</p>
+</div>
+<div class="flex items-center gap-space-xs text-text-secondary px-space-xs pt-1">
+<span class="material-symbols-outlined text-[18px] text-tertiary">notifications_active</span>
+<span class="font-body-sm text-body-sm">Reminder set for 14 Oct 2026 at 9:00 AM (1 day prior)</span>
+</div>
+</div>
+</section>
+<!-- Audit & Storage State Info (Transparent Architectural Honesty) -->
+<div class="flex items-center justify-center gap-space-xs text-text-tertiary py-space-sm">
+<span class="material-symbols-outlined text-[16px]">cloud_done</span>
+<span class="font-label-sm text-label-sm">On this device • Account synced</span>
+</div>
+</div>
+<!-- Persistent Bottom Action Bar (Stack Screen Action Floor) -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface-card/95 backdrop-blur-md pb-safe shadow-[0_-4px_16px_rgba(0,0,0,0.06)]">
+<div class="max-w-[680px] mx-auto px-space-md py-space-sm flex items-center gap-space-md">
+<!-- Edit Visit (Secondary CTA) -->
+<button class="flex-1 h-[52px] rounded-xl bg-surface-container-low hover:bg-secondary-container active:bg-surface-container-high transition-colors flex items-center justify-center gap-space-xs text-text-primary font-label-lg text-label-lg active:scale-[0.98]" onclick="handleEditAction()">
+<span class="material-symbols-outlined text-[20px] text-text-secondary">edit</span>
+<span class="">Edit Visit</span>
+</button>
+<!-- Share Summary PDF (Primary CTA) -->
+<button class="flex-1 h-[52px] rounded-xl bg-primary-container hover:bg-primary-variant active:bg-primary transition-colors flex items-center justify-center gap-space-xs text-on-primary font-label-lg text-label-lg shadow-sm active:scale-[0.98]" onclick="handleSharePdf()">
+<span class="material-symbols-outlined text-[20px]">share</span>
+<span class="">Share Summary PDF</span>
+</button>
+</div>
+</div>
+<!-- Subtle Notification Toast Overlay -->
+<div class="fixed top-20 left-1/2 -translate-x-1/2 z-50 bg-inverse-surface text-inverse-on-surface px-space-md py-space-sm rounded-full shadow-lg font-label-md text-label-md hidden transition-all duration-300 opacity-0 pointer-events-none" id="toastNotification">
+<span id="toastMessage" class="">Action recorded</span>
+</div>
+</div>
+<script>
+  // Overflow menu toggle
+  const menuBtn = document.getElementById('overflowMenuBtn');
+  const dropdown = document.getElementById('overflowDropdown');
+
+  if (menuBtn && dropdown) {
+    menuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      dropdown.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.add('hidden');
+      }
+    });
+  }
+
+  function showToast(message) {
+    const toast = document.getElementById('toastNotification');
+    const toastMsg = document.getElementById('toastMessage');
+    if (toast && toastMsg) {
+      toastMsg.textContent = message;
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.remove('opacity-0');
+        toast.classList.add('opacity-100');
+      }, 10);
+
+      setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0');
+        setTimeout(() => toast.classList.add('hidden'), 300);
+      }, 2600);
+    }
+  }
+
+  function handleEditAction() {
+    if (dropdown) dropdown.classList.add('hidden');
+    showToast('Opening visit editor...');
+  }
+
+  function handleDeleteAction() {
+    if (dropdown) dropdown.classList.add('hidden');
+    if (confirm('Delete this visit consultation record? This change is preserved in audit logs.')) {
+      showToast('Record scheduled for removal');
+    }
+  }
+
+  function handleSharePdf() {
+    showToast('Generating clinical summary PDF...');
+  }
+
+  function navigateDoctor() {
+    showToast('Navigating to Dr. Ahmed Khan profile...');
+  }
+
+  function previewFile(fileName) {
+    showToast('Opening preview: ' + fileName);
+  }
+
+  function downloadFile(fileName) {
+    showToast('Downloading ' + fileName);
+  }
+</script></main>
+
+
+
+</body></html>

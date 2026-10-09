@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary-fixed":"#001a43","on-primary-container":"#c9d7ff","on-primary":"#ffffff","secondary-fixed-dim":"#b9c7e0","on-secondary-fixed":"#0d1c2f","primary-container":"#0d59c2","on-error-container":"#93000a","outline":"#737784","on-error":"#ffffff","inverse-surface":"#213145","surface-dim":"#cbdbf5","tertiary":"#00504a","on-secondary-fixed-variant":"#3a485c","on-primary-fixed-variant":"#004398","surface-container":"#e2e8f0","primary-fixed":"#d9e2ff","on-surface":"#0f172a","on-secondary":"#ffffff","surface-container-high":"#e2e8f0","on-surface-variant":"#475569","inverse-primary":"#afc6ff","tertiary-container":"#006a63","background":"#f8fafc","primary-fixed-dim":"#afc6ff","tertiary-fixed-dim":"#80d5cb","error":"#ba1a1a","secondary-fixed":"#d5e3fd","secondary":"#64748b","secondary-container":"#e2e8f0","on-background":"#0f172a","surface":"#f8fafc","error-container":"#fee2e2","outline-variant":"#cbd5e1","on-tertiary-container":"#91e7dd","on-tertiary-fixed-variant":"#00504a","on-secondary-container":"#334155","primary":"#0d59c2","surface-variant":"#e2e8f0","tertiary-fixed":"#9cf2e8","on-tertiary-fixed":"#00201d","on-tertiary":"#ffffff","surface-bright":"#ffffff","surface-container-lowest":"#ffffff","surface-tint":"#0d59c2","surface-container-low":"#f1f5f9","surface-container-highest":"#cbd5e1","inverse-on-surface":"#f8fafc"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","2xl":"1rem","full":"9999px"},spacing:{"gutter-mobile":"0.75rem","gutter":"1rem","space-sm":"0.5rem","margin-tablet":"1.5rem","margin":"1rem","space-xl":"2rem","space-md":"1rem","space-xs":"0.25rem","space-lg":"1.5rem"},fontFamily:{"body-sm":["Inter","Roboto","sans-serif"],"title-lg":["Inter","Roboto","sans-serif"],"label-sm":["Inter","Roboto","sans-serif"],"headline-lg":["Inter","Roboto","sans-serif"],"label-lg":["Inter","Roboto","sans-serif"],"body-md":["Inter","Roboto","sans-serif"],"headline-md":["Inter","Roboto","sans-serif"],"body-lg":["Inter","Roboto","sans-serif"],"label-md":["Inter","Roboto","sans-serif"],"display-lg":["Inter","Roboto","sans-serif"],"title-md":["Inter","Roboto","sans-serif"]},fontSize:{"body-sm":["14px",{lineHeight:"20px",fontWeight:"400"}],"title-lg":["19px",{lineHeight:"26px",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"600"}],"headline-lg":["26px",{lineHeight:"34px",letterSpacing:"-0.01em",fontWeight:"700"}],"label-lg":["15px",{lineHeight:"20px",fontWeight:"600"}],"body-md":["16px",{lineHeight:"24px",fontWeight:"400"}],"headline-md":["22px",{lineHeight:"28px",fontWeight:"600"}],"body-lg":["17px",{lineHeight:"26px",fontWeight:"400"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"500"}],"display-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"title-md":["17px",{lineHeight:"24px",fontWeight:"600"}]}}}};</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen antialiased"><header class="fixed top-0 w-full z-40 bg-surface/90 backdrop-blur-md pt-safe border-b border-outline-variant/60 shadow-xs"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="My Medical History Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvPalfRCBuMTglnuQKKBvqkLg3tLiktw4Iv8_V1jQxWg5fBIMSijByrKm8gCZs-27xyAvpgNNM2RonCjI6fo6GFIWa2wjhDnK95nmNLkqop2d-prZgx6FJYJyMQAOipglxP4mq8_oHF34VFU-GDmLhAS2M7bJQ1yekFtF1GwwD89qxjEO8J8CZdMINJvf0T5HhInb29gdmEOas0V9GNGkhTbqSStq9d7Phl4SGLFJY"/><div class="flex flex-col"><span class="font-title-md text-title-md text-primary font-bold tracking-tight">My Medical History</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Clinical Streamline</span></div></div><div class="flex items-center gap-1"><button aria-label="Search records" class="w-10 h-10 flex items-center justify-center rounded-full text-secondary hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><a aria-label="User Profile" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors" data-path="settings" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHE-LLRZIo2i4vzaOk83T2gq8FO3mc9Bo6o12hv62lWMdQXVAbzDL59gMDvyNN5EEOuFQPLPSejMcYypjgkvyshubqG_6_ucJGCxmsQuiMFrE9d1Y_fHesTYxRPSPObDS6bYxe6l4nIGT_6e4ZteMTzRKrmY_34vnFM_fhChleZg4NOpzBB8nG98NnqejqjE2EFFUY8r5upfxdyexShNQBnjO8cFIhj6XAjx86dNok"/></a></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 px-margin bg-surface flex-grow"><div class="flex flex-col w-full pb-8 space-y-3.5">
+<!-- Greeting & Profile Row -->
+<div class="flex items-center justify-between pt-2.5">
+<div>
+<span class="font-label-md text-label-md text-secondary block font-medium">Thursday, 8 Oct 2026</span>
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">Good morning, Martha</h1>
+</div>
+<a aria-label="View Martha Jenkins's profile" class="relative p-0.5 rounded-full hover:bg-surface-container transition-colors flex items-center justify-center min-w-[44px] min-h-[44px]" data-path="settings" href="#">
+<img class="w-11 h-11 rounded-full object-cover ring-2 ring-surface-container" data-alt="A warm, respectful candid portrait of a 68-year-old Caucasian woman named Martha Jenkins with silver hair, gentle spectacles, and a warm sky-blue knit cardigan in soft morning light with clean clinical composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByvwevnk4EADdP0ZOK9Vm0KkOqV8NIPN-5zQe_IPgv81VP0IV2-84nmoWyNOuzU6alo8Q9kMNfhHg369tZw3FPCWYEnWfobejDSvwlZMitpyqsi5KtE9wwyDFG9zdo8EE4l-jWFgWDPihLWcsJGcTi77B-_v1DvjbD6SRlAxXUsM2jJYOAMnDWTlHBBQSlTGUwQRfd6BcoE7i1J3DvAquSTGp-r-xYkUFfDnkRDxDI"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-600 rounded-full ring-2 ring-white"></span>
+</a>
+</div>
+<!-- Requirement 1: Three Distinct Synchronization Layers in Unified Status Strip -->
+<div class="rounded-xl border border-outline-variant/70 bg-surface-container-lowest p-2.5 space-y-2 shadow-2xs">
+<div class="grid grid-cols-3 divide-x divide-outline-variant/60 items-center text-center">
+<!-- Layer 1: Local Storage -->
+<div class="px-1 flex items-center justify-center gap-1.5 min-h-[30px]" title="Always available offline on this device">
+<span class="w-2 h-2 rounded-full bg-emerald-500 shrink-0"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Saved on device</span>
+</div>
+<!-- Layer 2: Supabase Account Cloud Sync -->
+<div class="px-1 flex items-center justify-center gap-1.5 min-h-[30px]" title="Cloud sync status">
+<span class="material-symbols-outlined text-[15px] text-primary shrink-0">sync</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium truncate">Cloud synced</span>
+</div>
+<!-- Layer 3: Google Drive Backup -->
+<div class="px-1 flex items-center justify-between gap-1 min-h-[30px] pl-2">
+<div class="flex items-center gap-1 truncate" title="Drive backup: Today, 07:15 AM">
+<span class="material-symbols-outlined text-[14px] text-secondary shrink-0">cloud_upload</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">07:15 AM</span>
+</div>
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline shrink-0 px-1 py-0.5 rounded hover:bg-surface-container-low" id="manual-backup-btn" type="button">Back up</button>
+</div>
+</div>
+<!-- Non-blocking demonstration conflict banner with Review & Resolve -->
+<div class="flex items-center justify-between gap-2 px-2.5 py-1.5 rounded-lg bg-amber-50 border border-amber-200/90 text-amber-900">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-[17px] text-amber-700 shrink-0">sync_problem</span>
+<span class="font-label-sm text-label-sm font-medium truncate">Sync conflict on 1 record</span>
+</div>
+<button class="font-label-sm text-label-sm text-primary font-bold hover:underline shrink-0 bg-white/90 px-2 py-1 rounded shadow-2xs border border-amber-300" id="open-conflict-modal-btn" type="button">
+      Review &amp; Resolve
+    </button>
+</div>
+</div>
+<!-- Primary Interactive Search Bar -->
+<div class="relative w-full">
+<label class="sr-only" for="unified-search">Search medical archive</label>
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-secondary">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full h-12 pl-10 pr-10 bg-surface-container-lowest rounded-xl border border-outline-variant/70 font-body-md text-body-md text-on-surface placeholder:text-secondary focus:outline-none focus:ring-2 focus:ring-primary shadow-2xs transition-all" id="unified-search" placeholder="Search doctors, visits, medicines, tests..." type="text"/>
+<button aria-label="Voice search or audio note" class="absolute inset-y-0 right-0 pr-1.5 flex items-center justify-center w-10 h-12 text-secondary hover:text-primary" type="button">
+<span class="material-symbols-outlined text-[19px]">mic</span>
+</button>
+</div>
+<!-- Requirement 2: Prominent Primary Action Button (+ Add Medical Visit 48dp+) -->
+<a class="w-full h-13 min-h-[48px] px-space-md bg-primary hover:bg-[#004297] text-white rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-space-sm shadow-sm transition-all active:scale-[0.99] select-none" data-path="new-visit" href="#">
+<span class="material-symbols-outlined text-[22px]">add_circle</span>
+<span>+ Add Medical Visit</span>
+</a>
+<!-- Quick Registry Filter Pills -->
+<div class="flex items-center gap-2 overflow-x-auto pb-0.5 -mx-1 px-1">
+<a class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest border border-outline-variant/60 hover:bg-surface-container text-on-surface transition-colors shrink-0 min-h-[36px]" data-path="medicines" href="#">
+<span class="material-symbols-outlined text-[17px] text-primary">medication</span>
+<span class="font-label-md text-label-md">Medicines Index</span>
+</a>
+<a class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest border border-outline-variant/60 hover:bg-surface-container text-on-surface transition-colors shrink-0 min-h-[36px]" data-path="reports" href="#">
+<span class="material-symbols-outlined text-[17px] text-primary">biotech</span>
+<span class="font-label-md text-label-md">Lab Tests Index</span>
+</a>
+<a class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest border border-outline-variant/60 hover:bg-surface-container text-on-surface transition-colors shrink-0 min-h-[36px]" data-path="allergies" href="#">
+<span class="material-symbols-outlined text-[17px] text-amber-700">warning_amber</span>
+<span class="font-label-md text-label-md">Allergies (2)</span>
+</a>
+</div>
+<!-- Requirement 2: 4 Metric chips/cards -->
+<div class="grid grid-cols-2 gap-2.5">
+<!-- Stat 1: Doctors (4) -->
+<a class="p-3 bg-surface-container-lowest rounded-xl border border-outline-variant/60 shadow-2xs hover:border-primary/40 transition-all flex flex-col justify-between min-h-[96px]" data-path="doctors" href="#">
+<div class="flex items-center justify-between">
+<span class="w-7 h-7 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">stethoscope</span>
+</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">chevron_right</span>
+</div>
+<div class="mt-1.5">
+<span class="font-headline-md text-headline-md text-on-surface block leading-tight font-bold">4</span>
+<span class="font-label-md text-label-md text-secondary">Doctors</span>
+</div>
+</a>
+<!-- Stat 2: Visits (12) -->
+<a class="p-3 bg-surface-container-lowest rounded-xl border border-outline-variant/60 shadow-2xs hover:border-primary/40 transition-all flex flex-col justify-between min-h-[96px]" data-path="history" href="#">
+<div class="flex items-center justify-between">
+<span class="w-7 h-7 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">chevron_right</span>
+</div>
+<div class="mt-1.5">
+<span class="font-headline-md text-headline-md text-on-surface block leading-tight font-bold">12</span>
+<span class="font-label-md text-label-md text-secondary">Visits</span>
+</div>
+</a>
+<!-- Stat 3: Medicines (7 distinct recorded) -->
+<a class="p-3 bg-surface-container-lowest rounded-xl border border-outline-variant/60 shadow-2xs hover:border-primary/40 transition-all flex flex-col justify-between min-h-[96px]" data-path="medicines" href="#">
+<div class="flex items-center justify-between">
+<span class="w-7 h-7 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">pill</span>
+</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">chevron_right</span>
+</div>
+<div class="mt-1.5">
+<span class="font-headline-md text-headline-md text-on-surface block leading-tight font-bold">7</span>
+<span class="font-label-md text-label-md text-secondary">Medicines</span>
+</div>
+</a>
+<!-- Stat 4: Reports & files (9) -->
+<a class="p-3 bg-surface-container-lowest rounded-xl border border-outline-variant/60 shadow-2xs hover:border-primary/40 transition-all flex flex-col justify-between min-h-[96px]" data-path="reports" href="#">
+<div class="flex items-center justify-between">
+<span class="w-7 h-7 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">description</span>
+</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">chevron_right</span>
+</div>
+<div class="mt-1.5">
+<span class="font-headline-md text-headline-md text-on-surface block leading-tight font-bold">9</span>
+<span class="font-label-md text-label-md text-secondary">Reports &amp; files</span>
+</div>
+</a>
+</div>
+<!-- Requirement 2: Next upcoming follow-up card (West Wing Clinic details) -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/70 shadow-2xs p-3.5 relative overflow-hidden">
+<div class="flex items-start justify-between gap-space-sm mb-2">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-lg bg-blue-50 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">event</span>
+</span>
+<span class="font-label-lg text-label-lg text-primary font-bold">Upcoming Follow-up</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-blue-50 text-primary border border-blue-200 font-label-sm text-label-sm font-semibold">15 Oct 2026</span>
+</div>
+<div class="space-y-1 pl-9">
+<div class="font-title-md text-title-md text-on-surface font-semibold">15 October 2026 • 10:30 AM</div>
+<div class="font-body-md text-body-md text-secondary">Dr. Ahmed Khan • City Medical Hospital (West Wing Clinic)</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-0.5 leading-snug">
+  Routine blood pressure &amp; comprehensive metabolic lab review. Fasting required 8 hours prior.
+</p>
+</div>
+<div class="mt-3 pt-2.5 flex items-center justify-between border-t border-outline-variant/50">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[17px]">notifications_active</span>
+<span class="font-label-sm text-label-sm">Reminder set for 14 Oct</span>
+</div>
+<button class="font-label-md text-label-md text-primary font-semibold hover:underline min-h-[36px] px-2 flex items-center gap-1" type="button">
+<span>View visit details</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Requirement 2: Care Team (Khan, Rostova, Vance as Pulmonologist) -->
+<div class="space-y-2 pt-1">
+<div class="flex items-center justify-between">
+<h2 class="font-title-lg text-title-lg text-on-surface font-bold">Care Team</h2>
+<a class="font-label-md text-label-md text-primary font-semibold hover:underline py-1" data-path="doctors" href="#">View all (4)</a>
+</div>
+<div class="flex gap-2.5 overflow-x-auto pb-1 -mx-1 px-1">
+<!-- Doctor 1: Dr. Ahmed Khan -->
+<a class="w-64 shrink-0 bg-surface-container-lowest p-3 rounded-xl border border-outline-variant/60 shadow-2xs hover:border-primary/40 transition-all flex items-center gap-3" data-path="doctor-dr-ahmed-khan" href="#">
+<img class="w-12 h-12 rounded-full object-cover shrink-0 ring-1 ring-outline-variant/60" data-alt="Professional medical headshot portrait of Dr. Ahmed Khan, a Middle Eastern male physician in mid 40s wearing a crisp white consultation coat with stethoscope in clean bright hospital studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARw8wrLV7xEcvRKvIV8RdyYcV8bRDbQFWBO0M2jBNuMVhVjDEGV5BbrPzSQAoKd7rQtbDc0OV2RhoCWEqmjWfVJoT8SliHRAQQzy9Stzxf45GIwjBAWtHi6EJUfmggeo4m6YcGg3748ZU3G7nzkUnYwM2qcyytAJvWd0Zx8vfCHhcnsr7MK-Vi2vfnvkGcSoYSYurqik9xOV9A78RNauHx-vcK0Rzw7BjSM3FATDxq"/>
+<div class="min-w-0 flex-1">
+<span class="font-title-md text-title-md text-on-surface truncate block font-semibold">Dr. Ahmed Khan</span>
+<span class="font-body-sm text-body-sm text-secondary truncate block">General Physician</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold block mt-0.5">5 recorded visits</span>
+</div>
+</a>
+<!-- Doctor 2: Dr. Elena Rostova -->
+<a class="w-64 shrink-0 bg-surface-container-lowest p-3 rounded-xl border border-outline-variant/60 shadow-2xs hover:border-primary/40 transition-all flex items-center gap-3" data-path="doctor-dr-elena-rostova" href="#">
+<img class="w-12 h-12 rounded-full object-cover shrink-0 ring-1 ring-outline-variant/60" data-alt="Professional studio portrait of Dr. Elena Rostova, a female cardiologist in late 40s with spectacles and a calm, reassuring smile wearing professional clinical medical attire with blue accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBU4wbuDFCLi-thw6V1PV57nLrxzKJkDXsGobP8Xxc0TPTYZduBWlHb2dkNXnBsAyuUdX8b9WZkqh8wiHImV9dXpMD8WOQw9YlyBkCcJKxcQKyxZsWKguG3XWNCgI1zCqg90-UqvcT5Mxt80x25H7gLWjETpm4dPQn-Zttz_SoM2tsq4ZpWTCDMe4TjmR_c8xPhHBTYCi22fpx7IlUQDxKk3wtc5KfV4Nwq861fp24e"/>
+<div class="min-w-0 flex-1">
+<span class="font-title-md text-title-md text-on-surface truncate block font-semibold">Dr. Elena Rostova</span>
+<span class="font-body-sm text-body-sm text-secondary truncate block">Cardiologist</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold block mt-0.5">3 recorded visits</span>
+</div>
+</a>
+<!-- Doctor 3: Dr. Marcus Vance (Pulmonologist) -->
+<a class="w-64 shrink-0 bg-surface-container-lowest p-3 rounded-xl border border-outline-variant/60 shadow-2xs hover:border-primary/40 transition-all flex items-center gap-3" data-path="doctor-dr-marcus-vance" href="#">
+<div class="w-12 h-12 rounded-full bg-slate-100 border border-slate-200 text-on-secondary-container flex items-center justify-center font-title-md text-title-md shrink-0 font-bold">
+  MV
+</div>
+<div class="min-w-0 flex-1">
+<span class="font-title-md text-title-md text-on-surface truncate block font-semibold">Dr. Marcus Vance</span>
+<span class="font-body-sm text-body-sm text-secondary truncate block">Pulmonologist</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold block mt-0.5">2 recorded visits</span>
+</div>
+</a>
+</div>
+</div>
+<!-- Requirement 2: Recent Visits List (Clinical Streamline structured cards) -->
+<div class="space-y-2.5 pt-1">
+<div class="flex items-center justify-between">
+<h2 class="font-title-lg text-title-lg text-on-surface font-bold">Recent Visits</h2>
+<a class="font-label-md text-label-md text-primary font-semibold hover:underline py-1" data-path="history" href="#">View all (12)</a>
+</div>
+<!-- Visit Card 1: 6 October 2026 -->
+<div class="bg-surface-container-lowest p-3.5 rounded-xl border border-outline-variant/70 shadow-2xs space-y-2.5">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-medium block">6 October 2026</span>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold mt-0.5">Acute Bronchitis &amp; Hypertension</h3>
+<span class="font-body-sm text-body-sm text-secondary block mt-0.5">Dr. Ahmed Khan • City Medical Hospital</span>
+</div>
+<span class="px-2 py-0.5 rounded-md bg-blue-50 text-primary border border-blue-200/80 font-label-sm text-label-sm font-semibold">
+  Latest
+</span>
+</div>
+<div class="flex flex-wrap items-center gap-1.5 pt-0.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-container-low border border-outline-variant/50 text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-primary">pill</span>
+  3 Medicines
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-container-low border border-outline-variant/50 text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-teal-700">science</span>
+  2 Tests ordered
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-container-low border border-outline-variant/50 text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-secondary">attach_file</span>
+  2 Attachments
+</span>
+</div>
+<div class="pt-2 flex items-center justify-between border-t border-outline-variant/40">
+<button class="text-primary font-label-md text-label-md font-semibold hover:underline flex items-center gap-1 min-h-[40px]" type="button">
+<span>Open visit summary</span>
+<span class="material-symbols-outlined text-[17px]">arrow_forward</span>
+</button>
+<button aria-label="Share or export visit" class="text-secondary hover:text-primary min-w-[40px] min-h-[40px] flex items-center justify-center rounded-full" type="button">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+</div>
+</div>
+<!-- Visit Card 2: 15 September 2026 -->
+<div class="bg-surface-container-lowest p-3.5 rounded-xl border border-outline-variant/70 shadow-2xs space-y-2.5">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-medium block">15 September 2026</span>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold mt-0.5">Seasonal Allergies Follow-up</h3>
+<span class="font-body-sm text-body-sm text-secondary block mt-0.5">Dr. Ahmed Khan • City Medical Hospital</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-1.5 pt-0.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-container-low border border-outline-variant/50 text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-primary">pill</span>
+  2 Medicines
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-container-low border border-outline-variant/50 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">do_not_disturb_on</span>
+  0 Tests
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-container-low border border-outline-variant/50 text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-secondary">attach_file</span>
+  1 Attachment
+</span>
+</div>
+<div class="pt-2 flex items-center justify-between border-t border-outline-variant/40">
+<button class="text-primary font-label-md text-label-md font-semibold hover:underline flex items-center gap-1 min-h-[40px]" type="button">
+<span>Open visit summary</span>
+<span class="material-symbols-outlined text-[17px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Visit Card 3: 12 August 2026 -->
+<div class="bg-surface-container-lowest p-3.5 rounded-xl border border-outline-variant/70 shadow-2xs space-y-2.5">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-medium block">12 August 2026</span>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold mt-0.5">Annual Health Assessment</h3>
+<span class="font-body-sm text-body-sm text-secondary block mt-0.5">Dr. Ahmed Khan • City Medical Hospital</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-1.5 pt-0.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-container-low border border-outline-variant/50 text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-primary">pill</span>
+  1 Medicine
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-container-low border border-outline-variant/50 text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-teal-700">science</span>
+  3 Tests
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-container-low border border-outline-variant/50 text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-secondary">attach_file</span>
+  3 Attachments
+</span>
+</div>
+<div class="pt-2 flex items-center justify-between border-t border-outline-variant/40">
+<button class="text-primary font-label-md text-label-md font-semibold hover:underline flex items-center gap-1 min-h-[40px]" type="button">
+<span>Open visit summary</span>
+<span class="material-symbols-outlined text-[17px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Clean Storage Notice (Fulfills removal of misleading encryption claims while keeping quiet trusted utility) -->
+<div class="rounded-xl border border-outline-variant/60 bg-surface-container-low p-3 flex items-start gap-2.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0 mt-0.5">folder_shared</span>
+<p class="font-body-sm text-body-sm leading-normal">
+  Records are stored locally on your device with optional backup to Google Drive and Supabase account sync.
+</p>
+</div>
+</div>
+</main>
+<!-- Interactive Sync Conflict Resolution Modal / Bottom Sheet (Side-by-side comparison, Keep Both without discarding) -->
+<div aria-labelledby="conflict-title" aria-modal="true" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs hidden items-end sm:items-center justify-center p-0 sm:p-4 transition-opacity" id="conflict-modal" role="dialog">
+<div class="w-full max-w-lg bg-white rounded-t-2xl sm:rounded-2xl max-h-[90vh] flex flex-col shadow-xl overflow-hidden animate-in fade-in duration-200">
+<!-- Modal Header -->
+<div class="p-4 border-b border-outline-variant/70 flex items-center justify-between bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-amber-600">sync_problem</span>
+<h3 class="font-title-md text-title-md text-on-surface font-bold" id="conflict-title">Resolve Sync Conflict</h3>
+</div>
+<button aria-label="Close modal" class="w-8 h-8 rounded-full flex items-center justify-center text-secondary hover:bg-surface-container" id="close-conflict-modal-btn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Content: Side-by-side diff -->
+<div class="p-4 overflow-y-auto space-y-3.5 text-on-surface">
+<p class="font-body-sm text-body-sm text-secondary">
+        Changes to the visit record on <span class="font-semibold text-on-surface">6 Oct 2026 (Acute Bronchitis)</span> conflict between this device and your Supabase cloud account. Neither version will be discarded automatically.
+      </p>
+<div class="grid grid-cols-2 gap-2 text-left">
+<!-- Device Version -->
+<div class="border border-blue-200 rounded-xl p-3 bg-blue-50/40">
+<div class="flex items-center justify-between pb-1.5 border-b border-blue-100">
+<span class="font-label-sm text-label-sm font-bold text-primary">Local Device</span>
+<span class="font-label-sm text-label-sm text-secondary">Today, 08:12</span>
+</div>
+<div class="mt-2 space-y-1.5 font-body-sm text-body-sm">
+<div>
+<span class="font-label-sm text-secondary block">Dosage note:</span>
+<span class="font-medium">Amoxicillin 500mg TID (7 days)</span>
+</div>
+<div>
+<span class="font-label-sm text-secondary block">Doctor Notes:</span>
+<span>Mild wheezing noted on left base. Advised rest.</span>
+</div>
+</div>
+</div>
+<!-- Cloud Version -->
+<div class="border border-purple-200 rounded-xl p-3 bg-purple-50/40">
+<div class="flex items-center justify-between pb-1.5 border-b border-purple-100">
+<span class="font-label-sm text-label-sm font-bold text-purple-800">Cloud Sync</span>
+<span class="font-label-sm text-label-sm text-secondary">Yesterday, 19:40</span>
+</div>
+<div class="mt-2 space-y-1.5 font-body-sm text-body-sm">
+<div>
+<span class="font-label-sm text-secondary block">Dosage note:</span>
+<span class="font-medium">Amoxicillin 500mg BID (5 days)</span>
+</div>
+<div>
+<span class="font-label-sm text-secondary block">Doctor Notes:</span>
+<span>Initial consultation note imported from patient portal.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low text-secondary font-label-md text-label-md flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">info</span>
+<span>Selecting 'Keep Both' saves both versions as distinct revisions for your records.</span>
+</div>
+</div>
+<!-- Modal Actions -->
+<div class="p-3 border-t border-outline-variant/60 bg-surface-container-low flex flex-col sm:flex-row gap-2">
+<button class="flex-1 py-2.5 px-3 rounded-lg bg-primary text-white font-label-lg text-label-lg font-semibold hover:bg-[#004297] transition-colors" id="keep-both-btn" type="button">
+        Keep Both Revisions
+      </button>
+<button class="flex-1 py-2.5 px-3 rounded-lg border border-outline-variant text-on-surface font-label-lg text-label-lg font-semibold hover:bg-surface-container transition-colors" id="keep-local-btn" type="button">
+        Keep Local Version
+      </button>
+</div>
+</div>
+</div>
+<!-- 5 Bottom Navigation Tabs -->
+<nav class="fixed bottom-0 w-full z-40 pb-safe bg-surface/95 backdrop-blur-md border-t border-outline-variant/60" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center flex-1 h-full min-w-[48px] transition-colors text-primary font-semibold" data-path="home" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-sm text-label-sm mt-0.5">Home</span></a><a class="flex flex-col items-center justify-center flex-1 h-full min-w-[48px] text-secondary hover:text-primary transition-colors" data-path="doctors" href="#"><span class="material-symbols-outlined text-[24px]">stethoscope</span><span class="font-label-sm text-label-sm mt-0.5">Doctors</span></a><a class="flex flex-col items-center justify-center flex-1 h-full min-w-[48px] text-secondary hover:text-primary transition-colors" data-path="history" href="#"><span class="material-symbols-outlined text-[24px]">history</span><span class="font-label-sm text-label-sm mt-0.5">History</span></a><a class="flex flex-col items-center justify-center flex-1 h-full min-w-[48px] text-secondary hover:text-primary transition-colors" data-path="reports" href="#"><span class="material-symbols-outlined text-[24px]">description</span><span class="font-label-sm text-label-sm mt-0.5">Reports</span></a><a class="flex flex-col items-center justify-center flex-1 h-full min-w-[48px] text-secondary hover:text-primary transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[24px]">settings</span><span class="font-label-sm text-label-sm mt-0.5">Settings</span></a></div></nav>
+<script>
+  // Conflict modal interactions
+  const conflictModal = document.getElementById('conflict-modal');
+  const openModalBtn = document.getElementById('open-conflict-modal-btn');
+  const closeModalBtn = document.getElementById('close-conflict-modal-btn');
+  const keepBothBtn = document.getElementById('keep-both-btn');
+  const keepLocalBtn = document.getElementById('keep-local-btn');
+  const manualBackupBtn = document.getElementById('manual-backup-btn');
+
+  function openModal() {
+    if (conflictModal) {
+      conflictModal.classList.remove('hidden');
+      conflictModal.classList.add('flex');
+    }
+  }
+
+  function closeModal() {
+    if (conflictModal) {
+      conflictModal.classList.add('hidden');
+      conflictModal.classList.remove('flex');
+    }
+  }
+
+  if (openModalBtn) openModalBtn.addEventListener('click', openModal);
+  if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+  if (keepBothBtn) {
+    keepBothBtn.addEventListener('click', () => {
+      alert('Resolved: Both versions preserved with timestamped audit notes.');
+      closeModal();
+    });
+  }
+  if (keepLocalBtn) {
+    keepLocalBtn.addEventListener('click', () => {
+      alert('Resolved: Local device version preserved.');
+      closeModal();
+    });
+  }
+
+  if (manualBackupBtn) {
+    manualBackupBtn.addEventListener('click', () => {
+      const originalText = manualBackupBtn.innerText;
+      manualBackupBtn.innerText = 'Syncing...';
+      setTimeout(() => {
+        manualBackupBtn.innerText = 'Done ✓';
+        setTimeout(() => { manualBackupBtn.innerText = originalText; }, 1800);
+      }, 700);
+    });
+  }
+
+  // Client-side search helper
+  const searchInput = document.getElementById('unified-search');
+  if (searchInput) {
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const query = searchInput.value.trim();
+        if (query) {
+          console.log('Searching medical archive for:', query);
+        }
+      }
+    });
+  }
+</script>
+</body></html>
