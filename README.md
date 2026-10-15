@@ -37,6 +37,8 @@ Data lives in private app storage and is not additionally encrypted by this app.
 
 See [the implementation audit](docs/IMPLEMENTATION_AUDIT.md) for implemented, incomplete and unverified findings and the latest build/device results.
 
+Latest verification: **13 host tests passed, Flutter analysis clean, Android debug APK built**. Download the [journal ARM64 debug APK](build/verified/my-medical-history-journal-arm64-debug.apk) (about 110.7 MiB). The connected phone became unavailable before native testing; picker/viewer and Android restart checks remain unverified. Earlier APKs in the build folder predate this refinement.
+
 Host tests exercise the real SQLite migration and a separate Dart process, exact clinical text, two visits under one doctor, isolated editing/deletion, attachment byte persistence, source-file deletion, test-link stability, failed writes, filters, UI attachment actions and 200% text layouts.
 
 Android tests must run in order. Use the opt-in verification package to keep device tests separate from the user's app:

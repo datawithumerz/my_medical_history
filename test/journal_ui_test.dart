@@ -275,25 +275,60 @@ void main() {
       await tester.pumpAndSettle();
       await tester.tap(find.text('Remove'));
       await flushIo(tester, () => store.attachments.isEmpty && !store.busy);
-      await tester.runAsync(() => store.addAttachment(
-        visitId: 'first',
-        name: 'Preview.png',
-        content: Stream.value(fixturePng),
-      ));
+      await tester.runAsync(
+        () => store.addAttachment(
+          visitId: 'first',
+          name: 'Preview.png',
+          content: Stream.value(fixturePng),
+        ),
+      );
       await tester.pumpAndSettle();
       await tester.tap(find.text('Preview.png'));
-      await flushIo(tester, () => find.byType(AttachmentPreview).evaluate().isNotEmpty);
-      await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 100)));
+      await flushIo(
+        tester,
+        () => find.byType(AttachmentPreview).evaluate().isNotEmpty,
+      );
+      await tester.runAsync(
+        () => Future<void>.delayed(const Duration(milliseconds: 100)),
+      );
       await tester.pumpAndSettle();
       expect(find.textContaining('This image could not be read'), findsNothing);
       await tester.pageBack();
       await tester.pumpAndSettle();
-      await tester.runAsync(() => store.removeAttachment(store.attachments.single.id));
+      await tester.runAsync(
+        () => store.removeAttachment(store.attachments.single.id),
+      );
       expect(store.visits, hasLength(2));
       expect(tester.takeException(), isNull);
       await tester.pumpWidget(const SizedBox.shrink());
+      PaintingBinding.instance.imageCache.clear();
+      PaintingBinding.instance.imageCache.clearLiveImages();
+      // Image disposal is deferred to the next frame by Flutter.
+      await tester.pump();
+      await tester.pumpAndSettle();
+      await tester.runAsync(() async {
+        // Windows may keep the decoded image open briefly after route disposal.
+        for (var i = 0; i < 100; i++) {
+          await store.cleanRemovedFiles();
+          if (await directory.list().isEmpty) break;
+          await Future<void>.delayed(const Duration(milliseconds: 20));
+        }
+        final remaining = await directory.list().toList();
+        final queued = await store.repository.pendingFileDeletions();
+        for (final file in remaining) {
+          expect(queued, contains(file.uri.pathSegments.last));
+          try {
+            await file.delete();
+          } on FileSystemException catch (error) {
+            // The Windows engine can retain a mapped preview until it exits.
+            // Only accept a genuine sharing violation with a queued retry.
+            expect(Platform.isWindows, isTrue);
+            expect(error.osError?.errorCode, 32);
+          }
+        }
+        if (await directory.list().isEmpty) await directory.delete();
+      });
       store.dispose();
-      await tester.runAsync(() => directory.delete());
     },
   );
 }
